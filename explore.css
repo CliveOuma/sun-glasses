@@ -27,10 +27,11 @@
 /*Colores*/
 :root {
   --first-color: #E3F8FF;
-  --second-color: #DCFAFB;
+  --second-color: #16c275;
   --third-color: #FFE8DF;
+  --dark-color:black;
   --accent-color: #51f9ffbd;
-  --fifth-color: #c818a5;
+  --fifth-color: #c71c52;
   --fourth-color: hsl(35, 85%, 29%);
 }
 
