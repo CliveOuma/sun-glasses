@@ -1,0 +1,390 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+  font-family: "Graphik", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+}
+
+.container-body {
+  max-width: 1100px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.bg-image {
+  /*background: linear-gradient(Odeg, rgba(87,180,123,1) 0%, rgba(87,180,123,1) 56%); */
+  background-image: url(Images/map.avif);
+  /* https://unsplash.com/photos/VfUND4Uy40 */
+  background-size: cover;
+  /* align-content: center; */
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-repeat: no-repeat;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+/*-- VARIABLES CSS--*/
+/*Colores*/
+:root {
+  --first-color: #E3F8FF;
+  --second-color: #DCFAFB;
+  --third-color: #FFE8DF;
+  --accent-color: #FF5151;
+  --dark-color: #161616;
+}
+
+/*Tipografia responsive*/
+:root {
+  --body-font: 'Open Sans';
+  --h1-font-size: 1.5rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --smaller-font-size: 0.75rem;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --h1-font-size: 2rem;
+    --normal-font-size: 1rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+/*-- BASE --*/
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 2rem 0 0 0;
+  background-color: #fff;
+  color: var(--dark-color);
+  background-image: url(Images/about.avif);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  font-family: var(--body-font);
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*-- LAYAOUT --*/
+.main {
+  padding: 2rem 0;
+}
+
+.bd-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  max-width: 1200px;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  align-items: center;
+  gap: 2rem;
+}
+
+/*-- PAGES --*/
+.title-shop {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  color: chocolate;
+  font-size: 2.5rem;
+  margin-top: 20px;
+  padding-top: 30px;
+  align-items: center;
+}
+.title-shop::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 72px;
+  height: 2px;
+  background-color: var(--dark-color);
+  margin-left: .25rem;
+}
+
+/*-- COMPONENT --*/
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+article:nth-child(1) {
+  background-color: var(--first-color);
+}
+
+article:nth-child(2) {
+  background-color: var(--second-color);
+}
+
+article:nth-child(3) {
+  background-color: var(--third-color);
+}
+
+article:nth-child(4) {
+  background-color: var(--second-color);
+}
+
+.card__img {
+  width: 180px;
+  height: auto;
+  padding: 3rem 0;
+  transition: .5s;
+}
+
+.card__name {
+  position: absolute;
+  left: -25%;
+  top: 0;
+  width: 3.5rem;
+  height: 100%;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-align: center;
+  background-color: var(--dark-color);
+  color: #fff;
+  font-weight: bold;
+  transition: .5s;
+}
+
+.card__icon {
+  font-size: 1.5rem;
+  color: var(--dark-color);
+}
+
+.card__icon:hover {
+  color: var(--accent-color);
+}
+
+.card__precis {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  transition: .5s;
+}
+
+.card__preci {
+  display: block;
+  text-align: center;
+}
+
+.card__preci--before {
+  font-size: var(--smaller-font-size);
+  color: var(--accent-color);
+  margin-bottom: .25rem;
+}
+
+.card__preci--now {
+  font-size: var(--h3-font-size);
+  font-weight: bold;
+}
+
+/*Move left*/
+.card:hover {
+  box-shadow: 0 .5rem 1rem #D1D9E6;
+}
+
+.card:hover .card__name {
+  left: 0;
+}
+
+.card:hover .card__img {
+  transform: rotate(30deg);
+  margin-left: 3.5rem;
+}
+
+.card:hover .card__precis {
+  margin-left: 3.5rem;
+  padding: 0 1.5rem;
+}
+
+/*-- MEDIA QUERIES --*/
+@media screen and (min-width: 1200px) {
+  body {
+    margin: 3rem 0 0 0;
+  }
+
+  .title-shop {
+    margin: 0 5rem;
+  }
+
+  .bd-grid {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/* Navbar */
+nav {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+  /* Centering the nav */
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hamburger {
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  display: block;
+  width: 40px;
+  height: 5px;
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+.hamburger {
+  display: none;
+}
+
+.logo {
+  font-size: 2rem;
+  color: white;
+  padding: 1rem 0;
+  display: flex;
+  margin: 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav li {
+  list-style: none;
+  margin-right: 2rem;
+  /* Added margin for spacing between nav items */
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: orange;
+}
+
+/* small screens for navbar */
+@media (max-width: 900px) {
+  .hide {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+  }
+
+  .show {
+    max-height: 500px;
+    transition: max-height 0.5s ease-in;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    right: -5%;
+    top: 100%;
+    background: coral;
+    z-index: 1000;
+    border-radius: 7px;
+  }
+
+  nav ul li {
+    padding: 1rem;
+    padding-bottom: 0px;
+  }
+
+  .last-list {
+    padding-bottom: 1rem;
+  }
+
+  .container-ride {
+    flex-direction: column;
+    margin: unset;
+    gap: 2rem;
+  }
+
+  .right-column,
+  .left-column {
+    width: 100%;
+  }
+
+  .wrapper {
+    float: unset;
+    margin-top: 1.5rem;
+  }
+
+  .wrapper .item {
+    width: 100%;
+  }
+}

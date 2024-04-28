@@ -1,0 +1,524 @@
+/* Navbar */
+nav {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto; /* Centering the nav */
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .hamburger {
+    padding-right: 20px;
+    cursor: pointer;
+  }
+  
+  .hamburger .line {
+    display: block;
+    width: 40px;
+    height: 5px;
+    margin-bottom: 10px;
+    background-color: white;
+  }
+  .hamburger {
+    display: none;
+  }
+  .logo {
+    font-size: 2rem;
+    color: white;
+    padding: 1rem 0;
+    display: flex;
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav ul {
+    display: flex;
+  }
+  
+  nav li {
+    list-style: none;
+    margin-right: 2rem; /* Added margin for spacing between nav items */
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: orange;
+  }
+  /* small screens for navbar */
+  @media (max-width: 900px) {
+    .hide {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-out;
+    }
+    .show {
+      max-height: 500px;
+      transition: max-height 0.5s ease-in;
+    }
+    .hamburger {
+      display: block;
+    }
+    nav {
+      position: relative;
+    }
+    nav ul {
+      flex-direction: column;
+      gap: 1rem;
+      position: absolute;
+      right: -5%;
+      top: 100%;
+      background: coral;
+      z-index: 1000;
+      border-radius: 7px;
+    }
+    nav ul li {
+      padding: 1rem;
+      padding-bottom: 0px;
+    }
+    .last-list {
+      padding-bottom: 1rem;
+    }
+    .container-ride {
+      flex-direction: column;
+      margin: unset;
+      gap: 2rem;
+    }
+    .right-column,
+    .left-column {
+      width: 100%;
+    }
+    .wrapper{
+      float: unset;
+      margin-top: 1.5rem;
+    }
+    .wrapper .item{
+      width: 100%;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+/* Importing fonts from Google Fonts API */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lexend:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* Resetting default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Setting font family for the body */
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background: #061e32;
+}
+.bg-image {
+    background-image: url(Images/contact.avif);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+  }
+
+/* Container for the main content */
+.container {
+    width: 80%;
+    margin: 50px auto;
+}
+
+/* Styling for main heading */
+.container h1 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+/* Styling for paragraph text */
+.container p {
+    color: #ffffff;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+
+/* Styling for contact box container */
+.contact-box {
+    background: #ffffff;
+    display: flex;
+    border-radius: 20px;
+}
+
+/* Styling for left container inside the contact box */
+.container-left {
+    flex-basis: 60%;
+    padding: 40px 60px;
+}
+
+/* Styling for right container inside the contact box */
+.container-right {
+    flex-basis: 40%;
+    padding: 40px 60px;
+    background: hsl(207, 95%, 55%);
+    color: #ffffff;
+    border-radius: 0px 20px 20px 0px;
+}
+
+/* Styling for heading inside left container */
+.container-left h3 {
+    font-size: 25px;
+    color: #353535;
+    margin-bottom: 20px;
+}
+
+/* Styling for heading inside right container */
+.container-right h3 {
+    font-size: 25px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Styling for input rows */
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Styling for input groups inside input rows */
+.input-row .input-group {
+    flex-basis: 45%;
+}
+
+/* Styling for input fields */
+input {
+    width: 95%;
+    border: none;
+    color: #353535;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+} 
+
+/* Styling for textareas */
+textarea {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 15px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Styling for labels */
+label {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    color: #353535;
+}
+
+/* Styling for buttons */
+button {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    background: #000000;
+    border: none;
+    outline: none;
+    color: #fff;
+    width: 20%;
+    height: 40px;
+    border-radius: 25px;
+    margin-top: 20px;
+    transition: all 0.5s ease 0s;
+    box-shadow: 0px 5px 10px 0px #0000003a;
+}
+
+/* Hover styling for buttons */
+button:hover {
+    color: #fff;
+    background: hsl(207, 97%, 35%);
+    box-shadow: 0px 5px 10px 0px hsla(207, 97%, 35%, 0.431);
+}
+
+/* Styling for table cells */
+tr td:first-child {
+    font-size: 20px;
+    font-weight: 600;
+    padding-right: 20px;
+}
+
+tr td {
+    padding-top: 20px;
+}
+
+/* Styling for iframes */
+iframe {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    margin-top: 30px;
+}
+
+/* CSS for larger screens (laptop) */
+@media only screen and (min-width: 1367px) {
+    .container {
+        width: 70%;
+    }
+
+    .container h1 {
+        font-size: 50px;
+    }
+
+    .container p {
+        font-size: 25px;
+    }
+
+    .container-left,
+    .container-right {
+        padding: 40px;
+    }
+
+    .input-row .input-group {
+        flex-basis: 48%;
+    }
+
+    button {
+        width: 30%;
+    }
+}
+
+/* CSS for larger screens (laptop) */
+@media only screen and (max-width: 1366px) {
+    .container {
+        width: 70%;
+    }
+
+    .container h1 {
+        font-size: 45px;
+    }
+
+    .container p {
+        font-size: 22px;
+    }
+
+    .container-left,
+    .container-right {
+        padding: 40px;
+    }
+
+    input {
+        width: 90%;
+    }
+
+    .input-row .input-group {
+        flex-basis: 48%;
+    }
+
+    button {
+        width: 60%;
+    }
+}
+
+/* CSS for medium-sized screens (tablet) */
+@media only screen and (max-width: 1024px) {
+
+    .contact-box {
+        flex-direction: column;
+    }
+
+    .container {
+        width: 80%;
+    }
+
+    .container h1 {
+        font-size: 40px;
+    }
+
+    .container p {
+        font-size: 22px;
+    }
+
+    .container-left,
+    .container-right {
+        padding: 30px;
+    }
+
+    .input-row {
+        flex-wrap: wrap;
+    }
+
+    .input-row .input-group {
+        flex-basis: 100%;
+        margin-bottom: 15px;
+    }
+
+    button {
+        width: 25%;
+    }
+}
+
+/* CSS for smaller screens (mobile) */
+@media only screen and (max-width: 767px) {
+    .container {
+        width: 90%;
+    }
+
+    .container h1 {
+        font-size: 40px;
+    }
+
+    .container p {
+        font-size: 18px;
+    }
+
+    .container-left,
+    .container-right {
+        padding: 20px;
+    }
+
+    .input-row {
+        flex-direction: column; /* Stack input rows vertically */
+    }
+
+    .input-row .input-group {
+        flex-basis: 100%;
+        margin-bottom: 15px;
+    }
+
+    input,
+    textarea {
+        padding: 8px;
+    }
+
+    button {
+        width: 60%;
+    }
+
+    tr td:first-child {
+        font-size: 15px;
+        font-weight: 600;
+        padding-right: 10px;
+    }
+}
+
+
+
+main.cards {
+  display: flex;
+  padding: 32px;
+}
+
+main.cards section.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  max-height: 468px;
+  margin-left: 32px;
+}
+
+main.cards section.card:first-child {
+  margin-left: 0;
+}
+
+main.cards section.card .icon {
+  width: 64px;
+  height: 64px;
+}
+
+main.cards section.card img {
+  width: 100%;
+}
+
+main.cards section.card h3 {
+  font-size: 100%;
+  margin: 16px 0;
+}
+
+main.cards section.card span {
+  font-weight: 300;
+  max-width: 240px;
+  font-size: 80%;
+  margin-bottom: 16px;
+}
+
+main.cards section.card button {
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  border-radius: 32px;
+  border: 0;
+  cursor: pointer;
+  font-size: 80%;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 16px 0;
+}
+
+main.cards section.card.contact button {
+  background: linear-gradient(to right, #9F66FF, #DFCBFF);
+}
+main.cards section.card.shop button {
+  background: linear-gradient(to right, #3E8AFF, #BBDEFF);
+}
+main.cards section.card.about button {
+  background: linear-gradient(to right, #FE5F8F, #FFC7D9);
+}
+
+main.cards section.card.contact {
+  box-shadow: 20px 20px 50px -30px #DBC4FF;
+}
+main.cards section.card.shop {
+  box-shadow: 20px 20px 50px -30px #AFD6FF;
+}
+main.cards section.card.about {
+  box-shadow: 20px 20px 50px -30px #FFC1D5;
+}
+
+@media screen and (max-width: 720px) {
+  main.cards {
+      flex-direction: column;
+  }
+
+  main.cards section.card {
+      margin-left: 0;
+      margin-bottom: 32px;
+  }
+
+  main.cards section.card:last-child {
+      margin-bottom: 0;
+  }
+
+  main.cards section.card button {
+      font-size: 70%;
+  }
+
+}
+
+
